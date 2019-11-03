@@ -45,5 +45,7 @@ Route::prefix("products")->group(function (){
     Route::get("/","ProductController@show")->name("product.list");
     Route::get("/cart/{id}","CartController@addToCart")->name("product.addToCart");
     Route::get("/cart","CartController@showCart")->name("product.showCard");
+    Route::get("/cart/{id}/remove_product","CartController@removeProductIntoCart")->name("cart.deleteProduct");
+    Route::post('/update-to-cart/{id}', 'CartController@updateProductIntoCart')->name('cart.updateProductIntoCart');
 });
 

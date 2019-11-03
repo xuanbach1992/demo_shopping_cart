@@ -19,6 +19,7 @@
     <h1>Danh sach san pham</h1>
     @if (\Illuminate\Support\Facades\Session::has('success'))
         <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
             {{\Illuminate\Support\Facades\Session::get('success')}}
         </div>
     @endif
